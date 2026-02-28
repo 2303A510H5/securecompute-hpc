@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HPC Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>🧬 Secure HPC Analysis Result</h1>
+
+    <div class="card result">
+
+        <p><strong>Prediction:</strong> {{ result.prediction }}</p>
+        <p><strong>Probability:</strong> {{ result.probability }}</p>
+        <p><strong>Risk Score:</strong> {{ result.risk_score }}</p>
+        <p><strong>High Risk:</strong> {{ result.high_risk }}</p>
+        <p><strong>Model Accuracy:</strong> {{ result.accuracy }} %</p>
+
+        <hr>
+
+        <p><strong>Encrypted Task:</strong> {{ result.encrypted }}</p>
+        <p><strong>HPC Execution Time:</strong> {{ result.hpc_time }} sec</p>
+        <p><strong>Active Nodes:</strong> {{ result.nodes }}</p>
+        <p><strong>Blockchain Height:</strong> {{ result.block_height }}</p>
+
+        <br>
+
+        <a href="/download_report">
+            <button>Download Forensic Report</button>
+        </a>
+
+        <br><br>
+
+        <a href="/">
+            <button>Run Another Test</button>
+        </a>
+
+    </div>
+
+</body>
+</html>
+
